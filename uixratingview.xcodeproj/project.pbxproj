@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F37809913A8FEDE00654E14 /* arrow_down_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F37809713A8FEDE00654E14 /* arrow_down_64.png */; };
+		9F37809A13A8FEDE00654E14 /* arrow_up_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F37809813A8FEDE00654E14 /* arrow_up_64.png */; };
+		9F65FC7A13A7D85C00D409E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65FC7913A7D85C00D409E3 /* UIKit.framework */; };
+		9F65FC7C13A7D85C00D409E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65FC7B13A7D85C00D409E3 /* Foundation.framework */; };
+		9F65FC7E13A7D85C00D409E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65FC7D13A7D85C00D409E3 /* CoreGraphics.framework */; };
+		9F65FC8413A7D85C00D409E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FC8213A7D85C00D409E3 /* InfoPlist.strings */; };
+		9F65FC8713A7D85C00D409E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65FC8613A7D85C00D409E3 /* main.m */; };
+		9F65FC8A13A7D85C00D409E3 /* uixratingviewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65FC8913A7D85C00D409E3 /* uixratingviewAppDelegate.m */; };
+		9F65FC8D13A7D85C00D409E3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FC8B13A7D85C00D409E3 /* MainWindow.xib */; };
+		9F65FC9013A7D85C00D409E3 /* uixratingviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65FC8F13A7D85C00D409E3 /* uixratingviewViewController.m */; };
+		9F65FC9313A7D85C00D409E3 /* uixratingviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FC9113A7D85C00D409E3 /* uixratingviewViewController.xib */; };
+		9F65FC9A13A7D85C00D409E3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65FC7913A7D85C00D409E3 /* UIKit.framework */; };
+		9F65FC9B13A7D85C00D409E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65FC7B13A7D85C00D409E3 /* Foundation.framework */; };
+		9F65FC9C13A7D85C00D409E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F65FC7D13A7D85C00D409E3 /* CoreGraphics.framework */; };
+		9F65FCA413A7D85C00D409E3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FCA213A7D85C00D409E3 /* InfoPlist.strings */; };
+		9F65FCA713A7D85C00D409E3 /* uixratingviewTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FCA613A7D85C00D409E3 /* uixratingviewTests.h */; };
+		9F65FCA913A7D85C00D409E3 /* uixratingviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65FCA813A7D85C00D409E3 /* uixratingviewTests.m */; };
+		9F65FCB513A7D9BA00D409E3 /* UIXRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F65FCB413A7D9BA00D409E3 /* UIXRatingView.m */; };
+		9F65FCB813A8026800D409E3 /* bell_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FCB613A8026800D409E3 /* bell_on.png */; };
+		9F65FCB913A8026800D409E3 /* bell_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FCB713A8026800D409E3 /* bell_on@2x.png */; };
+		9F65FCBC13A802AC00D409E3 /* bell_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FCBA13A802AC00D409E3 /* bell_off.png */; };
+		9F65FCBD13A802AC00D409E3 /* bell_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F65FCBB13A802AC00D409E3 /* bell_off@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F65FC9D13A7D85C00D409E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F65FC6C13A7D85B00D409E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F65FC7413A7D85C00D409E3;
+			remoteInfo = uixratingview;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F37809713A8FEDE00654E14 /* arrow_down_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down_64.png; sourceTree = "<group>"; };
+		9F37809813A8FEDE00654E14 /* arrow_up_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_up_64.png; sourceTree = "<group>"; };
+		9F65FC7513A7D85C00D409E3 /* uixratingview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = uixratingview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F65FC7913A7D85C00D409E3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9F65FC7B13A7D85C00D409E3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F65FC7D13A7D85C00D409E3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9F65FC8113A7D85C00D409E3 /* uixratingview-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "uixratingview-Info.plist"; sourceTree = "<group>"; };
+		9F65FC8313A7D85C00D409E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F65FC8513A7D85C00D409E3 /* uixratingview-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uixratingview-Prefix.pch"; sourceTree = "<group>"; };
+		9F65FC8613A7D85C00D409E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F65FC8813A7D85C00D409E3 /* uixratingviewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uixratingviewAppDelegate.h; sourceTree = "<group>"; };
+		9F65FC8913A7D85C00D409E3 /* uixratingviewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uixratingviewAppDelegate.m; sourceTree = "<group>"; };
+		9F65FC8C13A7D85C00D409E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		9F65FC8E13A7D85C00D409E3 /* uixratingviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uixratingviewViewController.h; sourceTree = "<group>"; };
+		9F65FC8F13A7D85C00D409E3 /* uixratingviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uixratingviewViewController.m; sourceTree = "<group>"; };
+		9F65FC9213A7D85C00D409E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/uixratingviewViewController.xib; sourceTree = "<group>"; };
+		9F65FC9913A7D85C00D409E3 /* uixratingviewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = uixratingviewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F65FCA113A7D85C00D409E3 /* uixratingviewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "uixratingviewTests-Info.plist"; sourceTree = "<group>"; };
+		9F65FCA313A7D85C00D409E3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F65FCA513A7D85C00D409E3 /* uixratingviewTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uixratingviewTests-Prefix.pch"; sourceTree = "<group>"; };
+		9F65FCA613A7D85C00D409E3 /* uixratingviewTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uixratingviewTests.h; sourceTree = "<group>"; };
+		9F65FCA813A7D85C00D409E3 /* uixratingviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = uixratingviewTests.m; sourceTree = "<group>"; };
+		9F65FCB313A7D9BA00D409E3 /* UIXRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIXRatingView.h; path = "uixratingview files/UIXRatingView.h"; sourceTree = "<group>"; };
+		9F65FCB413A7D9BA00D409E3 /* UIXRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIXRatingView.m; path = "uixratingview files/UIXRatingView.m"; sourceTree = "<group>"; };
+		9F65FCB613A8026800D409E3 /* bell_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell_on.png; sourceTree = "<group>"; };
+		9F65FCB713A8026800D409E3 /* bell_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell_on@2x.png"; sourceTree = "<group>"; };
+		9F65FCBA13A802AC00D409E3 /* bell_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell_off.png; sourceTree = "<group>"; };
+		9F65FCBB13A802AC00D409E3 /* bell_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell_off@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F65FC7213A7D85C00D409E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F65FC7A13A7D85C00D409E3 /* UIKit.framework in Frameworks */,
+				9F65FC7C13A7D85C00D409E3 /* Foundation.framework in Frameworks */,
+				9F65FC7E13A7D85C00D409E3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F65FC9513A7D85C00D409E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F65FC9A13A7D85C00D409E3 /* UIKit.framework in Frameworks */,
+				9F65FC9B13A7D85C00D409E3 /* Foundation.framework in Frameworks */,
+				9F65FC9C13A7D85C00D409E3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F65FC6A13A7D85B00D409E3 = {
+			isa = PBXGroup;
+			children = (
+				9F65FC7F13A7D85C00D409E3 /* uixratingview */,
+				9F65FC9F13A7D85C00D409E3 /* uixratingviewTests */,
+				9F65FC7813A7D85C00D409E3 /* Frameworks */,
+				9F65FC7613A7D85C00D409E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F65FC7613A7D85C00D409E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F65FC7513A7D85C00D409E3 /* uixratingview.app */,
+				9F65FC9913A7D85C00D409E3 /* uixratingviewTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F65FC7813A7D85C00D409E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F65FC7913A7D85C00D409E3 /* UIKit.framework */,
+				9F65FC7B13A7D85C00D409E3 /* Foundation.framework */,
+				9F65FC7D13A7D85C00D409E3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F65FC7F13A7D85C00D409E3 /* uixratingview */ = {
+			isa = PBXGroup;
+			children = (
+				9F65FCB213A7D97800D409E3 /* uixratingviewfiles */,
+				9F65FC8813A7D85C00D409E3 /* uixratingviewAppDelegate.h */,
+				9F65FC8913A7D85C00D409E3 /* uixratingviewAppDelegate.m */,
+				9F65FC8B13A7D85C00D409E3 /* MainWindow.xib */,
+				9F65FC8E13A7D85C00D409E3 /* uixratingviewViewController.h */,
+				9F65FC8F13A7D85C00D409E3 /* uixratingviewViewController.m */,
+				9F65FC9113A7D85C00D409E3 /* uixratingviewViewController.xib */,
+				9F65FC8013A7D85C00D409E3 /* Supporting Files */,
+			);
+			path = uixratingview;
+			sourceTree = "<group>";
+		};
+		9F65FC8013A7D85C00D409E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F37809713A8FEDE00654E14 /* arrow_down_64.png */,
+				9F37809813A8FEDE00654E14 /* arrow_up_64.png */,
+				9F65FCBA13A802AC00D409E3 /* bell_off.png */,
+				9F65FCBB13A802AC00D409E3 /* bell_off@2x.png */,
+				9F65FCB613A8026800D409E3 /* bell_on.png */,
+				9F65FCB713A8026800D409E3 /* bell_on@2x.png */,
+				9F65FC8113A7D85C00D409E3 /* uixratingview-Info.plist */,
+				9F65FC8213A7D85C00D409E3 /* InfoPlist.strings */,
+				9F65FC8513A7D85C00D409E3 /* uixratingview-Prefix.pch */,
+				9F65FC8613A7D85C00D409E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F65FC9F13A7D85C00D409E3 /* uixratingviewTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F65FCA613A7D85C00D409E3 /* uixratingviewTests.h */,
+				9F65FCA813A7D85C00D409E3 /* uixratingviewTests.m */,
+				9F65FCA013A7D85C00D409E3 /* Supporting Files */,
+			);
+			path = uixratingviewTests;
+			sourceTree = "<group>";
+		};
+		9F65FCA013A7D85C00D409E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F65FCA113A7D85C00D409E3 /* uixratingviewTests-Info.plist */,
+				9F65FCA213A7D85C00D409E3 /* InfoPlist.strings */,
+				9F65FCA513A7D85C00D409E3 /* uixratingviewTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F65FCB213A7D97800D409E3 /* uixratingviewfiles */ = {
+			isa = PBXGroup;
+			children = (
+				9F65FCB313A7D9BA00D409E3 /* UIXRatingView.h */,
+				9F65FCB413A7D9BA00D409E3 /* UIXRatingView.m */,
+			);
+			name = uixratingviewfiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F65FC7413A7D85C00D409E3 /* uixratingview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F65FCAC13A7D85C00D409E3 /* Build configuration list for PBXNativeTarget "uixratingview" */;
+			buildPhases = (
+				9F65FC7113A7D85C00D409E3 /* Sources */,
+				9F65FC7213A7D85C00D409E3 /* Frameworks */,
+				9F65FC7313A7D85C00D409E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = uixratingview;
+			productName = uixratingview;
+			productReference = 9F65FC7513A7D85C00D409E3 /* uixratingview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F65FC9813A7D85C00D409E3 /* uixratingviewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F65FCAF13A7D85C00D409E3 /* Build configuration list for PBXNativeTarget "uixratingviewTests" */;
+			buildPhases = (
+				9F65FC9413A7D85C00D409E3 /* Sources */,
+				9F65FC9513A7D85C00D409E3 /* Frameworks */,
+				9F65FC9613A7D85C00D409E3 /* Resources */,
+				9F65FC9713A7D85C00D409E3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F65FC9E13A7D85C00D409E3 /* PBXTargetDependency */,
+			);
+			name = uixratingviewTests;
+			productName = uixratingviewTests;
+			productReference = 9F65FC9913A7D85C00D409E3 /* uixratingviewTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F65FC6C13A7D85B00D409E3 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 9F65FC6F13A7D85B00D409E3 /* Build configuration list for PBXProject "uixratingview" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9F65FC6A13A7D85B00D409E3;
+			productRefGroup = 9F65FC7613A7D85C00D409E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F65FC7413A7D85C00D409E3 /* uixratingview */,
+				9F65FC9813A7D85C00D409E3 /* uixratingviewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F65FC7313A7D85C00D409E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F65FC8413A7D85C00D409E3 /* InfoPlist.strings in Resources */,
+				9F65FC8D13A7D85C00D409E3 /* MainWindow.xib in Resources */,
+				9F65FC9313A7D85C00D409E3 /* uixratingviewViewController.xib in Resources */,
+				9F65FCB813A8026800D409E3 /* bell_on.png in Resources */,
+				9F65FCB913A8026800D409E3 /* bell_on@2x.png in Resources */,
+				9F65FCBC13A802AC00D409E3 /* bell_off.png in Resources */,
+				9F65FCBD13A802AC00D409E3 /* bell_off@2x.png in Resources */,
+				9F37809913A8FEDE00654E14 /* arrow_down_64.png in Resources */,
+				9F37809A13A8FEDE00654E14 /* arrow_up_64.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F65FC9613A7D85C00D409E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F65FCA413A7D85C00D409E3 /* InfoPlist.strings in Resources */,
+				9F65FCA713A7D85C00D409E3 /* uixratingviewTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F65FC9713A7D85C00D409E3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F65FC7113A7D85C00D409E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F65FC8713A7D85C00D409E3 /* main.m in Sources */,
+				9F65FC8A13A7D85C00D409E3 /* uixratingviewAppDelegate.m in Sources */,
+				9F65FC9013A7D85C00D409E3 /* uixratingviewViewController.m in Sources */,
+				9F65FCB513A7D9BA00D409E3 /* UIXRatingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F65FC9413A7D85C00D409E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F65FCA913A7D85C00D409E3 /* uixratingviewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F65FC9E13A7D85C00D409E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F65FC7413A7D85C00D409E3 /* uixratingview */;
+			targetProxy = 9F65FC9D13A7D85C00D409E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F65FC8213A7D85C00D409E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F65FC8313A7D85C00D409E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9F65FC8B13A7D85C00D409E3 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F65FC8C13A7D85C00D409E3 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		9F65FC9113A7D85C00D409E3 /* uixratingviewViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F65FC9213A7D85C00D409E3 /* en */,
+			);
+			name = uixratingviewViewController.xib;
+			sourceTree = "<group>";
+		};
+		9F65FCA213A7D85C00D409E3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F65FCA313A7D85C00D409E3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F65FCAA13A7D85C00D409E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9F65FCAB13A7D85C00D409E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		9F65FCAD13A7D85C00D409E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uixratingview/uixratingview-Prefix.pch";
+				INFOPLIST_FILE = "uixratingview/uixratingview-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9F65FCAE13A7D85C00D409E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uixratingview/uixratingview-Prefix.pch";
+				INFOPLIST_FILE = "uixratingview/uixratingview-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9F65FCB013A7D85C00D409E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/uixratingview.app/uixratingview";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uixratingviewTests/uixratingviewTests-Prefix.pch";
+				INFOPLIST_FILE = "uixratingviewTests/uixratingviewTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9F65FCB113A7D85C00D409E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/uixratingview.app/uixratingview";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "uixratingviewTests/uixratingviewTests-Prefix.pch";
+				INFOPLIST_FILE = "uixratingviewTests/uixratingviewTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F65FC6F13A7D85B00D409E3 /* Build configuration list for PBXProject "uixratingview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F65FCAA13A7D85C00D409E3 /* Debug */,
+				9F65FCAB13A7D85C00D409E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F65FCAC13A7D85C00D409E3 /* Build configuration list for PBXNativeTarget "uixratingview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F65FCAD13A7D85C00D409E3 /* Debug */,
+				9F65FCAE13A7D85C00D409E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F65FCAF13A7D85C00D409E3 /* Build configuration list for PBXNativeTarget "uixratingviewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F65FCB013A7D85C00D409E3 /* Debug */,
+				9F65FCB113A7D85C00D409E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F65FC6C13A7D85B00D409E3 /* Project object */;
+}

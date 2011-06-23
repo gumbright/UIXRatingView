@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'uixratingviewTests' target in the 'uixratingviewTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif
