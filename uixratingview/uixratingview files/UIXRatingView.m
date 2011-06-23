@@ -28,27 +28,51 @@
 ///////////////////////////////////////////////////////////
 //
 ///////////////////////////////////////////////////////////
+- (void) commonInitialization
+{
+    self.rating = -1;
+    transformedViewIndex = -1;
+
+}
+
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
+- (void) calculateGeometry
+{
+    indicatorWidth = (selectedImage.size.width < 44) ? 44 : selectedImage.size.width;
+    indicatorHeight = (selectedImage.size.height < 44) ? 44 : selectedImage.size.height;;
+    
+}
+
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
 - (id) initWithNumberOfElements: (NSUInteger) numElements 
                   selectedImage: (UIImage*) selectedImg
                 unselectedImage: (UIImage*) unselectedImg
 {
     CGRect rect;
+
+
     
-    rect.origin = CGPointZero;
-    indicatorWidth = (selectedImage.size.width < 44) ? 44 : selectedImage.size.width;
-    rect.size.width = indicatorWidth * numElements;
-    
-    rect.size.height = (selectedImage.size.height < 44) ? 44 : selectedImage.size.height;
-    indicatorHeight = rect.size.height;
-    
-    self = [self initWithFrame:rect];
+    self = [self initWithFrame:CGRectZero];
     if (self != nil)
     {
         self.unselectedImage = unselectedImg;
         self.selectedImage = selectedImg;
         self.numberOfElements = numElements;
-        self.rating = -1;
-        transformedViewIndex = -1;
+
+        [self calculateGeometry];
+        
+//        rect.origin = CGPointZero;
+//        rect.size.width = indicatorWidth * numElements;
+//        rect.size.height = indicatorHeight;
+
+        [self commonInitialization];
+        [self setNeedsLayout];
+        
+//        self.frame = rect;
     }
     
     return self;
@@ -57,8 +81,23 @@
 ///////////////////////////////////////////////////////////
 //
 ///////////////////////////////////////////////////////////
+- (void) awakeFromNib
+{
+    [self commonInitialization];
+}
+
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
 - (void) layoutSubviews
 {
+    CGRect rect;
+
+    rect.origin = self.frame.origin;
+    rect.size.width = indicatorWidth * self.numberOfElements;
+    rect.size.height = indicatorHeight;
+    self.frame = rect;
+
     if (indicators == nil)
     {
         indicators = [[NSMutableArray arrayWithCapacity:self.numberOfElements] retain];
