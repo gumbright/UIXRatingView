@@ -17,15 +17,6 @@
 @synthesize rating;
 @synthesize delegate;
 
-//- (id)initWithFrame:(CGRect)frame
-//{
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        // Initialization code
-//    }
-//    return self;
-//}
-
 ///////////////////////////////////////////////////////////
 //
 ///////////////////////////////////////////////////////////
@@ -103,7 +94,6 @@
 ///////////////////////////////////////////////////////////
 - (void) updateDisplayForRating
 {
-//    NSLog(@"rating=%u",self.rating);
     for (int ndx = 0; ndx < self.numberOfElements; ++ndx)
     {
         UIImageView* iv = [indicators objectAtIndex:ndx];
@@ -162,7 +152,6 @@
     {
         UITouch* touch = [touches anyObject];
         CGPoint pt = [touch locationInView:self];
-//        NSLog(@"tb %@",NSStringFromCGPoint(pt));
         int n = pt.x / indicatorWidth;
         self.rating = n+1;
         [self transformViewAtIndex:n];
