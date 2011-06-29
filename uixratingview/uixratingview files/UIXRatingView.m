@@ -2,8 +2,7 @@
 //  UIXRatingView.m
 //  uixratingview
 //
-//  Created by Guy Umbright on 6/14/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Umbright Consulting, Inc. All rights reserved.
 //
 
 #import "UIXRatingView.h"
@@ -28,22 +27,24 @@
 ///////////////////////////////////////////////////////////
 //
 ///////////////////////////////////////////////////////////
-- (void) commonInitialization
-{
-    self.rating = -1;
-    transformedViewIndex = -1;
-
-}
-
-///////////////////////////////////////////////////////////
-//
-///////////////////////////////////////////////////////////
 - (void) calculateGeometry
 {
     indicatorWidth = (selectedImage.size.width < 44) ? 44 : selectedImage.size.width;
     indicatorHeight = (selectedImage.size.height < 44) ? 44 : selectedImage.size.height;;
     
 }
+
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
+- (void) commonInitialization
+{
+    rating = 0;
+    transformedViewIndex = -1;
+
+    [self calculateGeometry];
+}
+
 
 ///////////////////////////////////////////////////////////
 //
@@ -62,8 +63,6 @@
         self.unselectedImage = unselectedImg;
         self.selectedImage = selectedImg;
         self.numberOfElements = numElements;
-
-        [self calculateGeometry];
         
 //        rect.origin = CGPointZero;
 //        rect.size.width = indicatorWidth * numElements;
@@ -92,7 +91,7 @@
 - (void) layoutSubviews
 {
     CGRect rect;
-
+    
     rect.origin = self.frame.origin;
     rect.size.width = indicatorWidth * self.numberOfElements;
     rect.size.height = indicatorHeight;
