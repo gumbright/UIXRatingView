@@ -12,8 +12,8 @@
 
 @synthesize unselectedImage;
 @synthesize selectedImage;
-@synthesize numberOfElements;
-@synthesize rating;
+@synthesize numberOfElements = _numberOfElements;
+@synthesize rating = _rating;
 @synthesize delegate;
 
 ///////////////////////////////////////////////////////////
@@ -39,9 +39,10 @@
 ///////////////////////////////////////////////////////////
 - (void) commonInitialization
 {
-    rating = 0;
+    self.rating = 0;
     transformedViewIndex = -1;
-
+    indicators = nil;
+    
     [self calculateGeometry];
 }
 
@@ -53,25 +54,16 @@
                   selectedImage: (UIImage*) selectedImg
                 unselectedImage: (UIImage*) unselectedImg
 {
-    CGRect rect;
-
-
-    
     self = [self initWithFrame:CGRectZero];
     if (self != nil)
     {
+        [self commonInitialization];
+
         self.unselectedImage = unselectedImg;
         self.selectedImage = selectedImg;
         self.numberOfElements = numElements;
         
-//        rect.origin = CGPointZero;
-//        rect.size.width = indicatorWidth * numElements;
-//        rect.size.height = indicatorHeight;
-
-        [self commonInitialization];
-        [self setNeedsLayout];
-        
-//        self.frame = rect;
+//        [self setNeedsLayout];
     }
     
     return self;
@@ -88,16 +80,23 @@
 ///////////////////////////////////////////////////////////
 //
 ///////////////////////////////////////////////////////////
-- (void) layoutSubviews
+- (void) clearIndicators
 {
-    CGRect rect;
+    for (UIView* v in indicators)
+    {
+        [v removeFromSuperview];
+    }
     
-    rect.origin = self.frame.origin;
-    rect.size.width = indicatorWidth * self.numberOfElements;
-    rect.size.height = indicatorHeight;
-    self.frame = rect;
+    [indicators release];
+    indicators = nil;
+}
 
-    if (indicators == nil)
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
+- (NSMutableArray*) indicators
+{
+    if (indicators == nil && self.numberOfElements != 0)
     {
         indicators = [[NSMutableArray arrayWithCapacity:self.numberOfElements] retain];
         
@@ -107,12 +106,34 @@
             iv.userInteractionEnabled = NO;
             iv.contentMode = UIViewContentModeCenter;
             
-            CGRect r = CGRectMake(indicatorWidth * ndx, 0, indicatorWidth, indicatorHeight);
+            CGRect r = CGRectMake(ndx, 0, indicatorWidth, indicatorHeight);
             iv.frame = r;
             [self addSubview:iv];
             [indicators addObject:iv];
             [iv release];
         }
+    }
+    
+    return indicators;
+}
+
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
+- (void) layoutSubviews
+{
+    CGRect rect;
+    
+    rect.origin = self.frame.origin;
+    rect.size.width = indicatorWidth * self.numberOfElements;
+    rect.size.height = indicatorHeight;
+    self.frame = rect;
+    
+    for (int ndx=0; ndx < self.numberOfElements; ++ndx)
+    {
+        UIImageView* iv = [[self indicators] objectAtIndex:ndx];
+        CGRect r = CGRectMake(indicatorWidth * ndx, 0, indicatorWidth, indicatorHeight);
+        iv.frame = r;
     }
 }
 
@@ -134,9 +155,9 @@
 {
     for (int ndx = 0; ndx < self.numberOfElements; ++ndx)
     {
-        UIImageView* iv = [indicators objectAtIndex:ndx];
+        UIImageView* iv = [[self indicators] objectAtIndex:ndx];
         
-        if (rating < 0)
+        if (self.rating < 0)
         {
             iv.image = self.unselectedImage;
         }
@@ -145,10 +166,12 @@
             if (ndx <= self.rating-1)
             {
                 iv.image = self.selectedImage;
+                [iv setNeedsDisplay];
             }
             else
             {
                 iv.image = self.unselectedImage;
+                [iv setNeedsDisplay];
             }
         }
     }
@@ -165,7 +188,7 @@
     {
         if (transformedViewIndex >= 0)
         {
-            UIView* v = [indicators objectAtIndex:transformedViewIndex];
+            UIView* v = [[self indicators] objectAtIndex:transformedViewIndex];
             v.transform = CGAffineTransformIdentity;
             transformedViewIndex = -1;
         }
@@ -175,7 +198,7 @@
             //apply new
             transformedViewIndex = index;
             transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.2, 1.2);
-            UIView* v = [indicators objectAtIndex:index];
+            UIView* v = [[self indicators] objectAtIndex:index];
             v.transform = transform;
             [v setNeedsDisplay];
         }
@@ -193,7 +216,7 @@
         int n = pt.x / indicatorWidth;
         self.rating = n+1;
         [self transformViewAtIndex:n];
-        [self updateDisplayForRating];
+//        [self updateDisplayForRating];
     }
 }
 
@@ -231,5 +254,26 @@
     [self transformViewAtIndex:-1];
 }
 
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
+- (void) setRating:(NSInteger) newRating
+{
+    _rating = newRating;
+    [self updateDisplayForRating];
+    [self setNeedsDisplay];
+}
+
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
+- (void) setNumberOfElements:(NSUInteger) num 
+{
+    _numberOfElements = num;
+    [self clearIndicators];
+    
+    [self updateDisplayForRating];
+    [self setNeedsDisplay];
+}
 
 @end

@@ -25,6 +25,8 @@
     int transformedViewIndex;
     
     NSObject<UIXRatingViewDelegate>* delegate;
+    NSInteger _rating;
+    NSUInteger _numberOfElements;
 }
 
 @property (nonatomic, retain) UIImage* unselectedImage;

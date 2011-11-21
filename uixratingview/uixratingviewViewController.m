@@ -37,7 +37,7 @@
     CGRect r = rv.frame;
     r.origin = CGPointMake(10, 10);
     rv.frame = r;
-    
+    rv.rating = 3;
     [self.view addSubview:rv];
     [rv release];
 
