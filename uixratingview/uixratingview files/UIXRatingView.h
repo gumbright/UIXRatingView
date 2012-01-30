@@ -21,6 +21,8 @@
     NSMutableArray* indicators;
     CGFloat indicatorWidth;
     CGFloat indicatorHeight;
+    UIImage* _selectedImage;
+    UIImage* _unselectedImage;
     
     int transformedViewIndex;
     

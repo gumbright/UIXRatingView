@@ -10,8 +10,8 @@
 
 @implementation UIXRatingView
 
-@synthesize unselectedImage;
-@synthesize selectedImage;
+@synthesize unselectedImage=_unselectedImage;
+@synthesize selectedImage=_selectedImage;
 @synthesize numberOfElements = _numberOfElements;
 @synthesize rating = _rating;
 @synthesize delegate;
@@ -29,9 +29,8 @@
 ///////////////////////////////////////////////////////////
 - (void) calculateGeometry
 {
-    indicatorWidth = (selectedImage.size.width < 44) ? 44 : selectedImage.size.width;
-    indicatorHeight = (selectedImage.size.height < 44) ? 44 : selectedImage.size.height;;
-    
+    indicatorWidth = (self.selectedImage.size.width < 44) ? 44 : self.selectedImage.size.width;
+    indicatorHeight = (self.selectedImage.size.height < 44) ? 44 : self.selectedImage.size.height;;
 }
 
 ///////////////////////////////////////////////////////////
@@ -57,11 +56,11 @@
     self = [self initWithFrame:CGRectZero];
     if (self != nil)
     {
-        [self commonInitialization];
 
         self.unselectedImage = unselectedImg;
         self.selectedImage = selectedImg;
         self.numberOfElements = numElements;
+        [self commonInitialization];
         
 //        [self setNeedsLayout];
     }
@@ -102,7 +101,7 @@
         
         for (int ndx=0; ndx < self.numberOfElements; ++ndx)
         {
-            UIImageView* iv = [[UIImageView alloc] initWithImage:unselectedImage];
+            UIImageView* iv = [[UIImageView alloc] initWithImage:self.unselectedImage];
             iv.userInteractionEnabled = NO;
             iv.contentMode = UIViewContentModeCenter;
             
@@ -124,6 +123,8 @@
 {
     CGRect rect;
     
+    [self calculateGeometry];
+
     rect.origin = self.frame.origin;
     rect.size.width = indicatorWidth * self.numberOfElements;
     rect.size.height = indicatorHeight;
@@ -274,6 +275,19 @@
     
     [self updateDisplayForRating];
     [self setNeedsDisplay];
+}
+
+///////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////
+- (void) setSelectedImage:(UIImage *)selectedImage
+{
+    if (selectedImage != _selectedImage)
+    {
+        [_selectedImage release];
+        _selectedImage = [selectedImage retain];
+    }
+    [self setNeedsLayout];
 }
 
 @end
